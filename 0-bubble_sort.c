@@ -1,5 +1,18 @@
 #include "sort.h"
-#include <stdbool.h>
+/**
+ * swap_f - swap two pointers to integer
+ *
+ * @a: first int pointer
+ * @b: second int pointer
+ */
+void swap_f(int *a, int *b)
+{
+	int swap;
+
+	swap = *a;
+	*a = *b;
+	*b = swap;
+}
 /**
  * bubble_sort - Sort an array of integers in ascending order.
  * @array: An array of integers to sort.
@@ -10,7 +23,6 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	int temp;
 	bool flag = true;
 	unsigned int i, j;
 	size_t n = size;
@@ -22,9 +34,7 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[j] > array[j + 1])
 			{
-				temp = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = temp;
+				swap_f(&array[j], &array[j + 1]);
 				print_array(array, size);
 				flag = true;
 			}
