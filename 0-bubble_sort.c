@@ -23,25 +23,18 @@ void swap_f(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	bool flag = true;
 	unsigned int i, j;
 	unsigned int n = size;
 
 	for (i = 0; i < n - 1; i++)
 	{
-		flag = false;
 		for (j = 0; j < n - 1 - i; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
 				swap_f(&array[j], &array[j + 1]);
 				print_array(array, size);
-				flag = true;
 			}
-		}
-		if (!flag)
-		{
-			break;
 		}
 	}
 }
