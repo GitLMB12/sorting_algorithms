@@ -23,8 +23,8 @@ void swap_f(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int i, j;
-	unsigned int n = size;
+	int i, j;
+	int n = size;
 
 	for (i = 0; i < n - 1; i++)
 	{
